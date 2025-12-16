@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --font-Header: 'Playfair Display', serif; 
+}
