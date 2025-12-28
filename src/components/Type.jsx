@@ -8,7 +8,7 @@ import SubCategory from "./SubCategory";
 
 function Type() {
   const { id } = useParams(); // category id
-  const { categories = [], products = [], ProductInfo = [] } = useContext(WebContext);
+  const { categories = [], ProductInfo = [],productDetails = [] } = useContext(WebContext);
 
   const category = useMemo(
     () => categories.find((c) => String(c.id) === String(id)),
@@ -39,7 +39,7 @@ function Type() {
   // productInfo (your other source) normalized to ProductCard props
   const productsItems = useMemo(() => {
     if (!category) return [];
-    return ProductInfo
+    return productDetails
       .filter((p) => String(p.categoryId) === String(category.id))
       .map((p) => ({
         productId: p.productId ?? p.id,
@@ -75,7 +75,8 @@ function Type() {
           key={sub.subId}
           subId={sub.subId}
           name={sub.name}
-          slug={sub.slug}
+          // slug={sub.slug}
+          subimage = {sub.subImage}
           parentId={category.id}
         />
       ))}
@@ -92,11 +93,7 @@ function Type() {
           productsItems.map((item) => (
             <ProductCard
               key={item.id}
-              productId={item.id}
-              categoryId={item.categoryId}
-              title={item.title}
-              Price={item.Price}
-              images={item.images} // ALWAYS an array now
+              product={product} // ALWAYS an array now
               className="w-[250px]"
             />
           ))

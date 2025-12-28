@@ -8,9 +8,9 @@ export const categories = [
     "id": "C001",
     "name": "Men",
     "slug": "men",
-    "image": [man],
+    "image": man,
     "subcategories": [
-      { "subId": "C001-TS", "name": "T-Shirts", "slug": "t-shirts" },
+      { "subId": "C001-TS", "name": "T-Shirts", "slug": "t-shirts","subImage":man },
       { "subId": "C001-SH", "name": "Shirts", "slug": "shirts" },
       { "subId": "C001-JK", "name": "Jackets", "slug": "jackets" }
     ]

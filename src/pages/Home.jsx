@@ -14,9 +14,9 @@ import { productDetails } from "../api";
 // import { categories } from "../assets/assets";
 
 function Home() {
-  const {ProductInfo, categories , offers = [] } = useContext(WebContext);
+  const {ProductInfo,productDetails, categories , offers = [] } = useContext(WebContext);
 
-  const randomProduct = [...ProductInfo,...productDetails].sort(()=>Math.random() - 0.5).slice(0,5)
+  const randomProduct = [...productDetails].sort(()=>Math.random() - 0.5).slice(0,5)
 
 
   return (
@@ -55,7 +55,7 @@ function Home() {
       <div className="flex flex-wrap pt-15 justify-evenly">
         {
           randomProduct.map((item) =>(
-            <ProductCard  className="w-[290px]" key={item.productId} images={item.images}/>
+            <ProductCard  className="w-[290px]" key={item.id} product={item}/>
           ))
         }
       </div>

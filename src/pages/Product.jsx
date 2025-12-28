@@ -1,17 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { WebContext } from "../context/WebContext";
 import ProductCard from "../components/ProductCard";
 
 function ProductList() {
   const { categoryId, subId } = useParams();
-  const { ProductInfo = [] } = useContext(WebContext);
+  const { productDetails = [] } = useContext(WebContext);
 
-  const filteredProducts = ProductInfo.filter(
-    (p) =>
-      p.categoryId === categoryId &&
-      p.subcategoryId === subId
-  );
+  // ✅ Correct filtering based on YOUR JSON
+  const filteredProducts = useMemo(() => {
+    return productDetails.filter(
+      (product) =>
+        String(product.category.id) === String(categoryId) &&
+        String(product.category.subcategoryId) === String(subId)
+    );
+  }, [productDetails, categoryId, subId]);
 
   return (
     <div className="p-4">
@@ -25,14 +28,9 @@ function ProductList() {
         ) : (
           filteredProducts.map((product) => (
             <ProductCard
-              key={product.id}
-              id={product.id}
-              brand={product.brand}
-              title={product.title}
-              images={product.thumbnail}
-              Price={product.price}
-              mrp={product.mrp}
-              discountPercent={product.discountPercent}
+              key={product.id}  
+              product={product} 
+              className="w-full"
             />
           ))
         )}
