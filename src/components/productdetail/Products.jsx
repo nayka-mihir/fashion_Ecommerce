@@ -31,7 +31,7 @@ function Products() {
   }
 
   // all images (main + sub)
-  const allImages = [variant.images.main, ...variant.images.sub];
+  const allImages = [variant.images.main, ...variant.images.gallery];
 
   // main image index
   const [imageIndex, setImageIndex] = useState(0);

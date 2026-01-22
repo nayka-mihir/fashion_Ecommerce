@@ -73,10 +73,10 @@ function Type() {
       {category.subcategories.map((sub) => (
         <SubCategory
           key={sub.subId}
-          subId={sub.subId}
+          subId={sub.id}
           name={sub.name}
           // slug={sub.slug}
-          subimage = {sub.subImage}
+          subImage = {sub.subImage}
           parentId={category.id}
         />
       ))}
@@ -93,7 +93,7 @@ function Type() {
           productsItems.map((item) => (
             <ProductCard
               key={item.id}
-              product={product} // ALWAYS an array now
+              product={item} // ALWAYS an array now
               className="w-[250px]"
             />
           ))

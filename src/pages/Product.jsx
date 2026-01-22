@@ -5,16 +5,24 @@ import ProductCard from "../components/ProductCard";
 
 function ProductList() {
   const { categoryId, subId } = useParams();
-  const { productDetails = [] } = useContext(WebContext);
+  const { ProductInfo = [] } = useContext(WebContext);
+
+  console.log("productInfo:", ProductInfo);
+console.log("categoryId:", categoryId);
+console.log("subId:", subId);
+console.log("Params:", useParams());
+
 
   // ✅ Correct filtering based on YOUR JSON
   const filteredProducts = useMemo(() => {
-    return productDetails.filter(
+    if(!categoryId || !subId) return [];
+
+    return ProductInfo.filter(
       (product) =>
-        String(product.category.id) === String(categoryId) &&
-        String(product.category.subcategoryId) === String(subId)
+        String(product.categoryId) === String(categoryId) &&
+        String(product.subcategoryId) === String(subId)
     );
-  }, [productDetails, categoryId, subId]);
+  }, [ProductInfo, categoryId, subId]);
 
   return (
     <div className="p-4">

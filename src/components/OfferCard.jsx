@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const OfferCard = ({ image, title, subtitle, className ='' }) => {
+const OfferCard = ({ image, title, subtitle,parentId,subId, className ='' }) => {
   return (
-    <Link to={`/product/`}>
+
+
+    <Link to={`/product/${parentId}/${subId}`}>
     <div  className={`relative  ${className} flex-none flex-shrink-0  h-[320px] rounded-2xl overflow-hidden shadow-lg group`}>
       {/* Image */}
       <img

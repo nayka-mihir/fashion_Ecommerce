@@ -7,16 +7,16 @@ import CustomText from "../components/CustomText";
 import OfferCard from "../components/OfferCard";
 import ItemsCat from "../components/ItemsCat";
 import ProductCard from "../components/ProductCard";
-import { productDetails } from "../api";
+// import { productDetails } from "../api";
 
 
 
 // import { categories } from "../assets/assets";
 
 function Home() {
-  const {ProductInfo,productDetails, categories , offers = [] } = useContext(WebContext);
+  const {ProductInfo, categories , offers = [] } = useContext(WebContext);
 
-  const randomProduct = [...productDetails].sort(()=>Math.random() - 0.5).slice(0,5)
+  const randomProduct = Object.values(ProductInfo).sort(()=>Math.random() - 0.5).slice(0,5)
 
 
   return (

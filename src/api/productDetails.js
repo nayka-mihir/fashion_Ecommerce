@@ -7,259 +7,63 @@ import women_cloths from "../assets/Womens_clothing.png";
 import full_sleeve_t_shirt from "../assets/full-sleeve-t-shirt.jpg";
 
 export const productDetails = [
-  {
-  id: "P101",
-  title: "JVX Men Sweatshirts || Sweatshirts for Men || Unisex Hoodie",
-  brand: "JVX",
-  // category: "Sweatshirts",
-  category: {
-      id: "C001",
-      name: "Men",
-      categoryImage:t_shirt,
-      subcategoryId: "C001-TS",
-      subcategoryName: "T-Shirts",
-      subname:"Sweatshirts"
-    },
-  description: "Premium quality sweatshirt with collar styling.",
-  
-  variants: [
-    {
-      color: "Beige",
-      hex: "#d9c7a0",
+   {
+    id: "P101",
+    title: "JVX Men Sweatshirt",
+    brand: "JVX",
+    categoryId: "men",
+    subcategoryId: "men-tshirts",
+    description: "Premium quality sweatshirt with collar styling.",
 
-      images: {
-        main: t_shirt,
-        sub: [
-          cargos,
-          shirt,
+    variants: [
+      {
+        id: "p101-v1",
+        color: "Beige",
+        hex: "#d9c7a0",
+
+        images: {
+          main: t_shirt,
+          gallery: [cargos, shirt]
+        },
+
+        pricing: {
+          price: 529,
+          mrp: 2999,
+          discountPercent: 82
+        },
+
+        sizes: [
+          { size: "S", stock: 12 },
+          { size: "M", stock: 10 },
+          { size: "L", stock: 4 },
+          { size: "XL", stock: 0 }
         ]
       },
 
-      pricing:{
-        price: 529,
-        mrp: 2999,
-        discountPercentage: 82,
-      },
-      
-      sizes: [
-        { size: "S", stock: 12 },
-        { size: "M", stock: 10 },
-        { size: "L", stock: 4 },
-        { size: "XL", stock: 0 }
-      ]
-    },
+      {
+        id: "p101-v2",
+        color: "Brown",
+        hex: "#5c3d2e",
 
-    {
-      color: "Brown",
-      hex: "#5c3d2e",
+        images: {
+          main: full_sleeve_t_shirt,
+          gallery: []
+        },
 
-      images: {
-        main: "brown_main.jpg",
-        sub: [
-          // "brown_1.jpg",
-          // "brown_2.jpg",
-          // "brown_3.jpg"
+        pricing: {
+          price: 529,
+          mrp: 2999,
+          discountPercent: 82
+        },
+
+        sizes: [
+          { size: "S", stock: 6 },
+          { size: "M", stock: 13 },
+          { size: "L", stock: 5 }
         ]
-      },
-
-      price: 529,
-      mrp: 2999,
-      discountPercentage: 82,
-
-      sizes: [
-        { size: "S", stock: 6 },
-        { size: "M", stock: 13 },
-        { size: "L", stock: 5 }
-      ]
-    },
-
-    {
-      color: "Grey",
-      hex: "#c9c9c9",
-      images: {
-        main: "grey_main.jpg",
-        sub: [
-          // "grey_1.jpg",
-          // "grey_2.jpg"
-        ]
-      },
-      price: 449,
-      mrp: 2999,
-      sizes: [
-        { size: "L", stock: 7 },
-        { size: "XL", stock: 3 }
-      ]
-    }
-  ]
-}, 
-  {
-  id: "P101",
-  title: "JVX Men Sweatshirts || Sweatshirts for Men || Unisex Hoodie",
-  brand: "JVX",
-  // category: "Sweatshirts",
-  category: {
-      id: "C001",
-      name: "Men",
-      subcategoryId: "C001-TS",
-      subcategoryName: "T-Shirts",
-      subname:"Sweatshirts"
-    },
-  description: "Premium quality sweatshirt with collar styling.",
-  
-  variants: [
-    {
-      color: "Beige",
-      hex: "#d9c7a0",
-
-      images: {
-        main: t_shirt,
-        sub: [
-          cargos,
-          shirt,
-        ]
-      },
-
-      pricing:{
-        price: 529,
-        mrp: 2999,
-        discountPercentage: 82,
-      },
-      
-      sizes: [
-        { size: "S", stock: 12 },
-        { size: "M", stock: 10 },
-        { size: "L", stock: 4 },
-        { size: "XL", stock: 0 }
-      ]
-    },
-
-    {
-      color: "Brown",
-      hex: "#5c3d2e",
-
-      images: {
-        main: "brown_main.jpg",
-        sub: [
-          // "brown_1.jpg",
-          // "brown_2.jpg",
-          // "brown_3.jpg"
-        ]
-      },
-
-      price: 529,
-      mrp: 2999,
-      discountPercentage: 82,
-
-      sizes: [
-        { size: "S", stock: 6 },
-        { size: "M", stock: 13 },
-        { size: "L", stock: 5 }
-      ]
-    },
-
-    {
-      color: "Grey",
-      hex: "#c9c9c9",
-      images: {
-        main: "grey_main.jpg",
-        sub: [
-          // "grey_1.jpg",
-          // "grey_2.jpg"
-        ]
-      },
-      price: 449,
-      mrp: 2999,
-      sizes: [
-        { size: "L", stock: 7 },
-        { size: "XL", stock: 3 }
-      ]
-    }
-  ]
-},
-  {
-  id: "P101",
-  title: "JVX Men Sweatshirts || Sweatshirts for Men || Unisex Hoodie",
-  brand: "JVX",
-  // category: "Sweatshirts",
-  category: {
-      id: "C001",
-      name: "Men",
-      subcategoryId: "C001-TS",
-      subcategoryName: "T-Shirts",
-      subname:"Sweatshirts"
-    },
-  description: "Premium quality sweatshirt with collar styling.",
-  
-  variants: [
-    {
-      color: "Beige",
-      hex: "#d9c7a0",
-
-      images: {
-        main: t_shirt,
-        sub: [
-          cargos,
-          shirt,
-        ]
-      },
-
-      pricing:{
-        price: 529,
-        mrp: 2999,
-        discountPercentage: 82,
-      },
-      
-      sizes: [
-        { size: "S", stock: 12 },
-        { size: "M", stock: 10 },
-        { size: "L", stock: 4 },
-        { size: "XL", stock: 0 }
-      ]
-    },
-
-    {
-      color: "Brown",
-      hex: "#5c3d2e",
-
-      images: {
-        main: "brown_main.jpg",
-        sub: [
-          // "brown_1.jpg",
-          // "brown_2.jpg",
-          // "brown_3.jpg"
-        ]
-      },
-
-      price: 529,
-      mrp: 2999,
-      discountPercentage: 82,
-
-      sizes: [
-        { size: "S", stock: 6 },
-        { size: "M", stock: 13 },
-        { size: "L", stock: 5 }
-      ]
-    },
-
-    {
-      color: "Grey",
-      hex: "#c9c9c9",
-      images: {
-        main: "grey_main.jpg",
-        sub: [
-          // "grey_1.jpg",
-          // "grey_2.jpg"
-        ]
-      },
-      price: 449,
-      mrp: 2999,
-      sizes: [
-        { size: "L", stock: 7 },
-        { size: "XL", stock: 3 }
-      ]
-    }
-  ]
-},
+      }
+    ]
+  },
 // {
 //   id: "P102",
 //   title: "JVX Men Sweatshirts || Sweatshirts for Men || Unisex Hoodie",
