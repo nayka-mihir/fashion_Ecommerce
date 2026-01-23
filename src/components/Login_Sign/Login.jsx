@@ -1,10 +1,24 @@
 import React, { useState } from "react";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
 
 function Login({ Setshowlogin }) {
-  const [current, Setcurrentstate] = useState("Sign up");
+  const [current, Setcurrentstate] = useState("SignIn");
   return (
-    <div className=" absolute z-1 items-center bg-[#fff] top-20 left-150 border">
-      <form action="" className=" flex flex-col relative m-[10px] justify-between">
+    <div>
+
+      {current==="SignIn"?
+      (<SignIn 
+        Setcurrentstate={Setcurrentstate} 
+        current={current} 
+        Setshowlogin={Setshowlogin}/>)
+      :
+      (<SignUp 
+        Setshowlogin={Setshowlogin}
+        Setcurrentstate={Setcurrentstate}
+      />)}
+       
+      {/* <form action="" className=" flex flex-col relative m-[10px] justify-between">
         <div className="absolute right-0 top-0 ">
             <div onClick={() => Setshowlogin(false)}>icon</div>
         </div>
@@ -24,7 +38,7 @@ function Login({ Setshowlogin }) {
           <span className="mx-3">Already have an account? Sign In</span>
             <div>{current}</div>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 }
