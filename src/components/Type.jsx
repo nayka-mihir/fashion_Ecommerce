@@ -39,7 +39,7 @@ function Type() {
   // productInfo (your other source) normalized to ProductCard props
   const productsItems = useMemo(() => {
     if (!category) return [];
-    return productDetails
+    return productDetails || ProductInfo
       .filter((p) => String(p.categoryId) === String(category.id))
       .map((p) => ({
         productId: p.productId ?? p.id,

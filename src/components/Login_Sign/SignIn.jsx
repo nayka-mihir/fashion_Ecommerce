@@ -1,11 +1,14 @@
 import React from 'react'
+import { Webicon } from '../../assets/assets'
 
 function SignIn({Setshowlogin, current,Setcurrentstate}) {
   return (
      <div className=" absolute z-1 items-center bg-[#fff] top-20 left-150 border">
       <form action="" className=" flex flex-col relative m-[10px] justify-between">
         <div className="absolute right-0 top-0 ">
-            <div onClick={() => Setshowlogin(false)}>icon</div>
+            <div onClick={() => Setshowlogin(false)}>
+              <img src={Webicon[0]} alt="remove" className='w-[15px]'/>
+            </div>
         </div>
         <div className="flex flex-col my-6 mx-3 justify-between">
           <div className="mt-2 mx-3 text-3xl font-bold">

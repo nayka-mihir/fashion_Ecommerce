@@ -1,4 +1,7 @@
 import heart from '../assets/heart.png'
+import remove from '../assets/remove.png'
+import notification from '../assets/notification.png'
+import addtocart from '../assets/add-to-cart.png'
 
 import man from '../assets/man.webp'
 import kid from '../assets/kids_clothing.png'
@@ -561,7 +564,10 @@ export const categories = [
 // ]
 
 export const Webicon = [
-    heart
+    remove,
+    notification,
+    heart,
+    addtocart
 ]
 
 export const displayimage = [

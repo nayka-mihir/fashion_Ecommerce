@@ -5,7 +5,7 @@ import ProductCard from "../components/ProductCard";
 
 function ProductList() {
   const { categoryId, subId } = useParams();
-  const { ProductInfo = [] } = useContext(WebContext);
+  const { ProductInfo = [] ,productDetails = [] } = useContext(WebContext);
 
   console.log("productInfo:", ProductInfo);
 console.log("categoryId:", categoryId);
@@ -30,7 +30,7 @@ console.log("Params:", useParams());
         Products → {categoryId} / {subId}
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
         {filteredProducts.length === 0 ? (
           <p>No products found</p>
         ) : (

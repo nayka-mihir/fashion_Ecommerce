@@ -21,7 +21,7 @@ export const productDetails = [
         color: "Beige",
         hex: "#d9c7a0",
 
-        images: {
+        image: {
           main: t_shirt,
           gallery: [cargos, shirt]
         },
@@ -45,7 +45,7 @@ export const productDetails = [
         color: "Brown",
         hex: "#5c3d2e",
 
-        images: {
+        image: {
           main: full_sleeve_t_shirt,
           gallery: []
         },

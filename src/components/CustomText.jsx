@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CustomText({text1,text2}) {
+function CustomText({text1,text2, className=''}) {
   return (
     <div className='w-full h-[20px] justify-center items-center text-4xl font-medium  font-(family-name:--font-Header)'>
         <div className='flex justify-center gap-5'>

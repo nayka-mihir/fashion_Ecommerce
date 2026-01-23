@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { Webicon } from '../../assets/assets';
 
 function Navbar({Setshowlogin}) {
   return (
@@ -24,8 +25,8 @@ function Navbar({Setshowlogin}) {
         <div>
           <h3>Seller</h3>
         </div>
-        <div><img src="mm" alt="notification" /></div>
-        <div><img src="mm" alt="addTocart" /></div>
+        <div><img src={Webicon[1]} alt="notification" className='w-[20px]' /></div>
+        <div><img src={Webicon[3]} alt="addTocart" className='w-[20px]'/></div>
       
         <div className="bg-[#D4AF37] px-5 py-2 rounded-2xl" onClick={()=>Setshowlogin("true")}>Login</div>
     

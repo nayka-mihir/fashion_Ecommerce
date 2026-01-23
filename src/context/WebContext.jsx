@@ -8,7 +8,7 @@ export const WebContext = createContext();
 export const WebContextProvider = (props) => {
 
     const value = {
-        displayimage,offers,prodectCategory,ProductInfo,mens_clothes,categories,products,productDetails
+        displayimage,offers,prodectCategory,ProductInfo,mens_clothes,categories,products,productDetails,
     };
 
     return (

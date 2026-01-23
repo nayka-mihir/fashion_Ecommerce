@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { Webicons } from "../assets/assets";
+import { Webicon } from "../assets/assets";
 
 function ProductCard({ product, className =""}) {
 
-  const { id,brand,title,type,images,Price,mrp,discountPercent, }= product;
+  const { id,brand,title,type,image,Price,mrp,discountPercent, }= product;
 
   const variant  = product?.variants?.[0];
 
 
-  const image = variant?.images?.main; 
+  const images =  variant?.image?.main || image ; 
   
   return (
      <Link
@@ -18,11 +18,11 @@ function ProductCard({ product, className =""}) {
     >
     <div className={`card ${className} bg-[#fff] relative border rounded-xl p-[10px]  overflow-hidden`}>
       <div className="image-wrap relative items-center justify-center flex h-[250px]  roundex-ld bg-[#111] object-fill rounded-xl overflow-hidden">
-        {/* <img
+        <img
           className="w-full h-full object-cover block"
-          src={image}
+          src={images}
           alt="not found"
-        /> */}
+        />
         {/* <div className="absolute left-[10px] text-[11px] px-[10px] top-[10px] flex items-center rounded-lg bg-white justify-between gap-3  ">
           {badge}OVERSIZED FIT
         </div> */}
@@ -34,7 +34,7 @@ function ProductCard({ product, className =""}) {
             aria-label="favorite"
             className="w-8 h-8 rounded-full bg-white/70 flex items-center justify-center"
             >
-            <img src='mm' alt="favorite" className="w-5 h-5" />
+            <img src={Webicon[2]} alt="favorite" className="w-5 h-5" />
           </button>
           </div>
         </div>

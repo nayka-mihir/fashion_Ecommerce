@@ -51,7 +51,7 @@ function Home() {
         }
       </div>
       <ItemsCat/>
-      <CustomText text1={'Collection'} />
+      <CustomText text1={'Collection'} className="mt-[20px]"/>
       <div className="flex flex-wrap pt-15 justify-evenly">
         {
           randomProduct.map((item) =>(

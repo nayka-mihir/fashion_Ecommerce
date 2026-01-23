@@ -23,7 +23,7 @@ function ItemsCat() {
 //   const items = prodectCategory.length ? prodectCategory : fallback;
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col  py-4 border">
       <div className="mb-6">
         <CustomText text1={"Shop by Category"} />
       </div>
