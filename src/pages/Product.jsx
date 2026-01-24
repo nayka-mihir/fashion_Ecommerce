@@ -7,10 +7,10 @@ function ProductList() {
   const { categoryId, subId } = useParams();
   const { ProductInfo = [] ,productDetails = [] } = useContext(WebContext);
 
-  console.log("productInfo:", ProductInfo);
-console.log("categoryId:", categoryId);
-console.log("subId:", subId);
-console.log("Params:", useParams());
+//   console.log("productInfo:", ProductInfo);
+// console.log("categoryId:", categoryId);
+// console.log("subId:", subId);
+// console.log("Params:", useParams());
 
 
   // ✅ Correct filtering based on YOUR JSON

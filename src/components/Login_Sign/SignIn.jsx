@@ -15,7 +15,7 @@ function SignIn({Setshowlogin, current,Setcurrentstate}) {
             <h1>Welcome Back.</h1>
             <h1>Please Sign In.</h1>
           </div>
-            <h3>Every Login is Required for Your Security</h3>
+            <h3 className='mx-3 mt-2'>Every Login is Required for Your Security</h3>
           <div className="flex flex-col justify-between my-2 py-5 px-2 w-[350px]  ">
             <input type="email" placeholder="Email Address" className="border p-1 my-2"/>
             <input type="password" placeholder="Password" className="border p-1 my-2"/>
