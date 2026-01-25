@@ -8,11 +8,11 @@ function MainImage({ allImages, imageIndex, nextImage, prevImage }) {
   }
 
   return (
-    <div className="relative w-[350px] h-[450px] flex items-center" >
+    <div className="relative w-[380px] h-[570px] flex items-center" >
       <img
         src={allImages[imageIndex]}
         alt="main"
-        className="w-full h-full object-cover rounded-lg"
+        className="w-full h-full object-fill rounded-lg"
       />
       <div className="absolute flex items-center w-full">
         <GallaryNav nextImage={nextImage} prevImage={prevImage} />

@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { WebContext } from "../../context/WebContext";
 import MainImage from "./Gallary/MainImage";
 import ThumbnailList from "./Gallary/ThumbnailList";
+import ProductData from "./Productdata/ProductData";
 
 function Products() {
   const { id } = useParams();
@@ -46,7 +47,7 @@ function Products() {
   const resetImage = () => setImageIndex(0);
 
   return (
-    <div className="flex gap-10 p-10">
+    <div className="flex gap-10 p-10 ml-26">
 
       {/* LEFT IMAGES */}
       <div className="w-[100px]">
@@ -76,6 +77,8 @@ function Products() {
         setSelectedVariant={setSelectedVariant}
         resetImage={resetImage}
       /> */}
+
+      <ProductData/>
     </div>
   );
 }

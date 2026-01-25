@@ -3,7 +3,7 @@ import Products from '../components/productdetail/Products'
 
 function ProductDetail() {
   return (
-    <div>
+    <div >
       <Products/>
     </div>
   )
