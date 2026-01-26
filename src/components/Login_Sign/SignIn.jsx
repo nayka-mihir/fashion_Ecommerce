@@ -1,5 +1,6 @@
 import React from 'react'
 import { Webicon } from '../../assets/assets'
+import InputField from '../common/InputField'
 
 function SignIn({Setshowlogin, current,Setcurrentstate}) {
   return (
@@ -17,8 +18,10 @@ function SignIn({Setshowlogin, current,Setcurrentstate}) {
           </div>
             <h3 className='mx-3 mt-2'>Every Login is Required for Your Security</h3>
           <div className="flex flex-col justify-between my-2 py-5 px-2 w-[350px]  ">
-            <input type="email" placeholder="Email Address" className="border p-1 my-2"/>
-            <input type="password" placeholder="Password" className="border p-1 my-2"/>
+            {/* <input type="email" placeholder="Email Address" className="border p-1 my-2"/> */}
+            {/* <input type="password" placeholder="Password" className="border p-1 my-2"/> */}
+            <InputField label="Email" name="Email" type="email" placeholder="Email Address"/>
+            <InputField label="Password" name="password" type="password" placeholder="Password"/>
             <button className="bg-[#001d35] text-white p-1 my-2">Sign In</button>
           </div>
 
