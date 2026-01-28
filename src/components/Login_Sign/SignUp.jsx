@@ -23,15 +23,25 @@ function SignUp({Setshowlogin,Setcurrentstate}) {
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
-
     if(!form.name) return setError("name is required");
     if(!validateEmail(form.email)) return setError("Invalid email");
+    
     if(!validatePassword(form.password))  
       return setError("password must be 8+ char,1 uppercase & 1 number");
     if(form.password !== form.conformPassword)  
       return setError("passwords do not match");
+    console.log(form.email);
+
+    localStorage.setItem("user",JSON.stringify({
+      name:form.name,
+      email:form.email,
+      // password:form.password
+    }))
+
 
     await registerUser(form);
+
+    Setcurrentstate("SignIn")
   }
   return (
     <div className=" absolute z-1 items-center bg-[#fff] top-20 left-150 border">
