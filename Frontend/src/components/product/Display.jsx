@@ -1,7 +1,7 @@
 // src/components/Display.jsx
 import React, { useRef, useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { WebContext } from "../context/WebContext";
+import { WebContext } from "../../context/WebContext";
 
 function Display({ images: imagesProp }) {
   const { displayimage = [] } = useContext(WebContext) || {};

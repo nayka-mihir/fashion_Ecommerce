@@ -1,12 +1,12 @@
 // pages/Home.jsx
 import React, { useContext, useEffect } from "react";
-import Display from "../components/Display";
-import Category from "../components/Category";
-import { WebContext } from "../context/WebContext";
-import CustomText from "../components/CustomText";
-import OfferCard from "../components/OfferCard";
-import ItemsCat from "../components/ItemsCat";
-import ProductCard from "../components/ProductCard";
+import Display from "../../components/product/Display";
+import Category from "../../components/product/Category";
+import { WebContext } from "../../context/WebContext";
+import CustomText from "../../components/CustomText";
+import OfferCard from "../../components/product/OfferCard";
+import ItemsCat from "../../components/product/ItemsCat";
+import ProductCard from "../../components/product/ProductCard";
 // import { productDetails } from "../api";
 
 

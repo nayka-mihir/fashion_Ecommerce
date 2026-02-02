@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from "react";
 import { useParams } from "react-router-dom";
-import { WebContext } from "../context/WebContext";
-import ProductCard from "../components/ProductCard";
+import { WebContext } from "../../context/WebContext";
+import ProductCard from "../../components/product/ProductCard";
 
 function ProductList() {
   const { categoryId, subId } = useParams();

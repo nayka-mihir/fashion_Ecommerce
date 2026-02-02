@@ -1,7 +1,7 @@
 // src/components/ItemsCat.jsx
 import React, { useContext } from "react";
 import OfferCard from "./OfferCard";
-import { WebContext } from "../context/WebContext";
+import { WebContext } from "../../context/WebContext";
 import CustomText from "./CustomText";
 import { Link, useParams } from "react-router-dom";
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Webicon } from '../../assets/assets'
-import InputField from '../common/InputField'
+import InputField from '../../components/common/InputField'
 import { registerUser } from '../../api/authService'
-import { validateEmail,validatePassword} from '../utils/validators'
+import { validateEmail,validatePassword} from '../../components/utils/validators'
 import {useNavigate} from 'react-router-dom'
 
 function SignUp({Setshowlogin,Setcurrentstate}) {
