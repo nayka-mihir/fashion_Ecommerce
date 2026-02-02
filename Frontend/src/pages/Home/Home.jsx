@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from "react";
 import Display from "../../components/product/Display";
 import Category from "../../components/product/Category";
 import { WebContext } from "../../context/WebContext";
-import CustomText from "../../components/CustomText";
+import CustomText from "../../components/common/CustomText";
 import OfferCard from "../../components/product/OfferCard";
 import ItemsCat from "../../components/product/ItemsCat";
 import ProductCard from "../../components/product/ProductCard";

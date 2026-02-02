@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import OfferCard from "./OfferCard";
 import { WebContext } from "../../context/WebContext";
-import CustomText from "./CustomText";
+import CustomText from "../common/CustomText";
 import { Link, useParams } from "react-router-dom";
 
 function ItemsCat() {

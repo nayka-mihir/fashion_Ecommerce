@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Webicon } from '../../assets/assets'
-import InputField from '../common/InputField'
+import InputField from '../../components/common/InputField'
 import { loginUser } from '../../api/authService'
-import { validateEmail } from '../utils/validators'
+import { validateEmail } from '../../components/utils/validators'
 import { useNavigation,useNavigate } from 'react-router-dom'
 
 function SignIn({Setshowlogin, current,Setcurrentstate}) {

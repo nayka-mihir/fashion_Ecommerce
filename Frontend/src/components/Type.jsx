@@ -1,10 +1,10 @@
 import React, { useContext, useMemo } from "react";
 import { useParams,} from "react-router-dom";
 import { WebContext } from "../context/WebContext";
-import CustomText from "./CustomText";
-import Display from "./Display";
-import ProductCard from "./ProductCard";
-import SubCategory from "./SubCategory";
+import CustomText from "./common/CustomText";
+import Display from "./product/Display";
+import ProductCard from "./product/ProductCard";
+import SubCategory from "./product/SubCategory";
 
 function Type() {
   const { id } = useParams(); // category id
