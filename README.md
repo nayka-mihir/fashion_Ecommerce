@@ -1,6 +1,6 @@
 # 🛒 Ecommerce Project
 
-A full-stack **Ecommerce web application** developed as a **college team project**, using **Angular** for the frontend and **Node.js + Express** for the backend.
+A full-stack **Ecommerce web application** developed as a **college team project**, using **ReactJs** for the frontend and **Java Spring boot** for the backend.
 
 This project is designed to support **team collaboration via GitHub** and follows a clean, scalable folder structure.
 
