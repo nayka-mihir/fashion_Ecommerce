@@ -3,11 +3,14 @@ import { Webicon } from '../../assets/assets'
 import InputField from '../common/InputField'
 import { loginUser } from '../../api/authService'
 import { validateEmail } from '../utils/validators'
+import { useNavigation,useNavigate } from 'react-router-dom'
 
 function SignIn({Setshowlogin, current,Setcurrentstate}) {
 
   const [form , setForm] = useState({email:"", password:""});
   const [error, setError] = useState('');
+
+  const navigate = useNavigate();
 
   const handleChange = (e)=>
     setForm({...form,[e.target.name]:e.target.value});
@@ -20,8 +23,15 @@ function SignIn({Setshowlogin, current,Setcurrentstate}) {
 
     const res = await loginUser(form);
 
-    if (!res.success) setError(res.message);
-    else alert("Login Successful ✅");
+    if (!res.success){
+      setError(res.message)
+    } 
+    else {
+      alert("Login Successful ✅");
+      navigate("/");
+    }
+
+    
 
   }
   return (
