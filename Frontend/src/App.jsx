@@ -11,11 +11,12 @@ import Login from "./pages/Login_Sign/Login"
 function App() {
  
   const [showlogin,Setshowlogin] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
  
   return (
     <div className="px-6 sm:px-[5vw] md:px-[6vw] lg:px-[2vw]" > {/* corrected vw unit & removed extra bracket */}
     {showlogin?<Login Setshowlogin={Setshowlogin}/>:<></>}
-      <Navbar Setshowlogin={Setshowlogin}/>
+      <Navbar Setshowlogin={Setshowlogin} setIsLoggedIn={setIsLoggedIn}/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/type/:id" element={<Type/>}/>

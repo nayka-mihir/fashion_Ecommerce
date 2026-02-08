@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { Webicon } from '../../assets/assets';
 
-function Navbar({Setshowlogin}) {
+function Navbar({Setshowlogin,setIsLoggedIn,isLoggedIn}) {
   return (
      <div className="w-full flex  items-center justify-between py-5 shadow-xl text-[#1C1C1C]">
       <div className="flex items-center gap-10">
@@ -28,7 +28,11 @@ function Navbar({Setshowlogin}) {
         <div><img src={Webicon[1]} alt="notification" className='w-[20px]' /></div>
         <div><img src={Webicon[3]} alt="addTocart" className='w-[20px]'/></div>
       
-        <div className="bg-[#D4AF37] px-5 py-2 rounded-2xl" onClick={()=>Setshowlogin("true")}>Login</div>
+        {
+          isLoggedIn ? 
+          <div className="bg-[#D4AF37] px-5 py-2 rounded-2xl" onClick={()=>Setshowlogin("true")}>Login</div> :
+          <div className="bg-[#D4AF37] px-5 py-2 rounded-2xl" >logout</div>
+        }
     
       </div>
     </div>
